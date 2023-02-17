@@ -19,11 +19,5 @@ const storage = {
   save,
   load,
 };
-// export default Object.assign(
-//   {},
-//   {
-//     save,
-//     load,
-//   }
-// );
+
 export default storage;

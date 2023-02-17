@@ -14,6 +14,7 @@ export class ContactList extends Component {
     ),
     onDeleteProduct: PropTypes.func,
   };
+
   render() {
     return (
       <>
