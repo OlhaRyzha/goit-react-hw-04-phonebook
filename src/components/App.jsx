@@ -14,15 +14,13 @@ const CONTACTS = [
 ];
 
 export function App() {
-  const [contacts, setContacts] = useState([]);
+  const [contacts, setContacts] = useState(
+    storage.load('contacts-list') ?? CONTACTS
+  );
+
   const [filter, setFilter] = useState('');
 
   useEffect(() => {
-    setContacts(storage.load('contacts-list') ?? CONTACTS);
-  }, []);
-
-  useEffect(() => {
-    if (contacts.length === 0) return;
     storage.save('contacts-list', contacts);
   }, [contacts]);
 
